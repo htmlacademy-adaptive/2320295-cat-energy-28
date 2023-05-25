@@ -1,0 +1,98 @@
+.gift {
+  position: relative;
+  display: flex;
+  background-image: url("../img/common/background-gift@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-color: $basic_green;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $basic_white;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/common/background-gift@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 290px;
+    justify-content: center;
+    align-items: end;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 200px;
+    justify-content: end;
+    align-items: center;
+    background-image: url("../img/common/background-gift-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/common/background-gift-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    align-items: end;
+    background-image: url("../img/common/background-gift@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/common/background-gift@2x.jpg");
+    }
+  }
+}
+
+.gift__description {
+  margin: 0;
+  padding: 0 20px;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 48px;
+    background-image: url("../img/sprite.svg#icon-gift");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 42px;
+
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 14%;
+    text-align: start;
+
+    &::before {
+      position: absolute;
+      left: 10%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 245px;
+    margin-right: 0;
+    margin-bottom: 42px;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      top: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

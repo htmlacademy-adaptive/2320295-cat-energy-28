@@ -1,0 +1,83 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin advantages-icon {
+  content: "";
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @media (max-width: $mobile-width-only) {
+    margin-right: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+    margin-bottom: 30px;
+  }
+}
+
+@mixin advantages-count {
+  position: absolute;
+  top: -38px;
+  left: 118px;
+  display: block;
+  width: 120px;
+  height: 280px;
+  color: $basic_grey;
+  font-family: $font-oswald;
+  font-size: 280px;
+  line-height: 280px;
+  z-index: -1;
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+  }
+}
+
+@mixin delimiter {
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    display: block;
+    width: 100vw;
+    height: 1px;
+    background-color: $special_grey-2;
+  }
+}
+
+@mixin index-catalog-icon {
+  display: block;
+  width: 68px;
+  min-width: 68px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@mixin index-catalog-tablet-icon {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  margin-right: 0;
+  transform: translateY(-50%);
+}

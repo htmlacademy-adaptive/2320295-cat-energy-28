@@ -24,7 +24,7 @@ git push
 ¹ В `academy` должна быть ссылка на репозиторий Академии. Если его там нет, добавьте:
 
 ```
-git remote add academy git@github.com:htmlacademy-adaptive/2320295-cat-energy-28.git
+git remote add academy git@github.com:htmlacademy-adaptive/2251785-cat-energy-28.git
 ```
 
 Когда вы обновили `master`, создайте ветку для нового задания:

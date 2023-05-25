@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $basic_green;
+  font-family: $font-oswald;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+
+  &:hover {
+    background-color: $basic_green-2;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $basic_green-2;
+  }
+}
+
+.button__text {
+  &:active {
+    opacity: 0.3;
+  }
+}

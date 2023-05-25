@@ -1,0 +1,7 @@
+.inner-contacts__container {
+  background-color: $basic_grey;
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic_white;
+  }
+}
