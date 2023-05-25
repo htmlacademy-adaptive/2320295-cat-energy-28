@@ -1,0 +1,216 @@
+.index-catalog__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.index-catalog__item {
+  position: relative;
+  padding: 22px 20px 0 20px;
+  background-color: $basic_grey;
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 266px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 372px;
+
+    &--loss {
+      padding: 76px 52px 56px 52px;
+    }
+
+    &--gain {
+      padding: 76px 28px 52px 52px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 374px;
+
+    &--loss {
+      padding: 40px 60px 54px 52px;
+    }
+
+    &--gain {
+      padding: 46px 70px 54px 52px;
+    }
+  }
+}
+
+.index-catalog__wrapper {
+  @include flex-column;
+  justify-content: space-between;
+  min-height: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+  }
+}
+
+.index-catalog__title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-family: $font-oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  color: $basic_black;
+  text-transform: uppercase;
+
+  &--loss::before {
+    @include index-catalog-icon;
+    content: "";
+    background-image: url("../img/sprite.svg#cat-loss");
+    margin-right: 10px;
+    margin-left: -6px;
+
+    @media (min-width: $tablet-width) {
+      @include index-catalog-tablet-icon;
+      width: 200px;
+      height: 212px;
+      background-size: 200px 212px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+      top: 54px;
+      left: 6px;
+      width: 100px;
+      min-width: 100px;
+      height: 106px;
+      margin-right: 68px;
+      background-size: 100px 106px;
+    }
+  }
+
+  &--gain::before {
+    @include index-catalog-icon;
+    content: "";
+    background-image: url("../img/sprite.svg#cat-gain");
+    margin-top: 2px;
+    margin-right: 10px;
+    margin-left: -6px;
+
+    @media (min-width: $tablet-width) {
+      @include index-catalog-tablet-icon;
+      width: 268px;
+      height: 200px;
+      margin-top: 4px;
+      margin-right: -30px;
+      background-size: 268px 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+      top: 48px;
+      left: 0;
+      width: 134px;
+      min-width: 134px;
+      height: 100px;
+      margin-right: 47px;
+      margin-left: -20px; //Подгон
+      background-size: 134px 100px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 38px;
+  }
+}
+
+.index-catalog__description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 340px;
+    margin-bottom: 48px;
+    padding-bottom: 0;
+    border-bottom: none;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.index-catalog__link {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  margin-top: auto;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  font-family: $font-oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $basic_black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    min-width: 24px;
+    height: 10px;
+    background-image: url("../img/sprite.svg#arrow");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 24px 10px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $special_grey-4;
+    column-gap: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.index-catalog__link:hover::after {
+  width: 32px;
+  height: 12px;
+  background-size: 32px 12px;
+}

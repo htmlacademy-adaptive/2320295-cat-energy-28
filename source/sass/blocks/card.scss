@@ -1,0 +1,258 @@
+.card {
+  display: grid;
+  grid-template-areas:
+    "img  title"
+    "img  items"
+    "btn  btn";
+  grid-template-columns: repeat(2, 50%);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  &--more {
+    @include flex-column;
+    position: relative;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include flex-column;
+    min-height: 430px;
+    background-color: $basic_grey;
+
+    &--more {
+      background-color: $basic_white;
+      border: 2px solid $basic-grey;
+    }
+  }
+}
+
+.card__image-link {
+  display: block;
+  grid-area: img;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    align-self: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -72px;
+    margin-bottom: 34px;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 44px;
+  }
+
+  &--more {
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
+  }
+}
+
+.card__image {
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 172px;
+    height: 196px;
+    margin-top: -6px;
+    margin-bottom: -4px;
+  }
+
+  &--more {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 22px;
+    align-self: center;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+      margin-top: 56px;
+      margin-bottom: 46px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 52px;
+    }
+  }
+}
+
+.card__heading {
+  max-width: 76px;
+  margin: 0;
+  font-family: $font-oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $special_dark-grey-2;
+  grid-area: title;
+  text-transform: uppercase;
+
+  &--more {
+    min-width: 166px;
+    margin-bottom: 26px;
+    align-self: center;
+    color: #111111;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    &--more {
+      max-width: 210px;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 145px;
+    align-self: center;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+
+    &--more {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.card__link {
+  color: $special_dark-grey-2;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.card__items {
+  margin: 0;
+  grid-area: items;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+}
+
+.card__wrapper {
+  @include flex-space-between;
+  column-gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $special_grey;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.card__description {
+  max-width: 146px;
+  margin: 0;
+}
+
+.card__sub-title {
+  margin: 0;
+
+  &--more {
+    max-width: 166px;
+    align-self: center;
+
+    @media (max-width: $mobile-width-only) {
+      min-width: 220px;
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.card__button {
+  min-height: 40px;
+  margin-top: auto;
+  padding: 0;
+  text-align: center;
+  grid-area: btn;
+
+  &--more {
+    background-color: $basic_grey;
+    color: $special_dark-grey;
+
+    &:hover {
+      background-color: $special_grey-2;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $special_grey-2;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: auto;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 38px;
+  }
+}

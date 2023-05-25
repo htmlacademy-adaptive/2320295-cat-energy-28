@@ -1,0 +1,43 @@
+.copyright__link {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $special_dark-grey;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 34px;
+    background-color: $special_grey-3;
+    mask-image: url("../img/sprite.svg#htmlacademy");
+  }
+
+  &:hover::after {
+    background-color: $basic_green;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::after {
+    background-color: $basic_green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $tablet-width) {
+    column-gap: 28px;
+  }
+}

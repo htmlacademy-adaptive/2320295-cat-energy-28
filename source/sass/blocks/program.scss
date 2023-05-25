@@ -1,0 +1,58 @@
+.program {
+  font-family: $font-oswald;
+  font-style: normal;
+  color: $basic_black;
+  overflow: hidden;
+}
+
+.program__container {
+  padding-top: 28px;
+  padding-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    padding-right: 68px;
+    padding-bottom: 72px;
+    padding-left: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
+    padding-right: 110px;
+    padding-bottom: 82px;
+    padding-left: 110px;
+  }
+}
+
+.program__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.program__sub-title {
+  margin: 0;
+  margin-bottom: 38px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
