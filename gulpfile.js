@@ -14,7 +14,6 @@ import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
-
 export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
